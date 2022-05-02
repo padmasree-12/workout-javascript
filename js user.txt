@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>User Registration Form</title>
+<script type="text/javascript">
+function validation() 
+{
+var fna = document.getElementById("fnm").value;
+var lna = document.getElementById("lnm").value;
+var add = document.getElementById("ad").value;
+var city = document.getElementById("cty").value;
+var state = document.getElementById("sta").value;
+var country = document.getElementById("cnty").value;
+var pincode = document.getElementById("pc").value;
+if(fna===""||fna===null)
+{
+alert("Enter the First Name");
+return false;
+}
+else if(lna===""||lna===null)
+{
+alert("Enter The Last Name");
+return false;
+}
+else if(add===""||add===null)
+{
+alert("Enter The Address");
+return false;
+}
+else if(city===""||city===null)
+{
+alert("Enter The City");
+return false;
+}
+else if(country===""||country===null)
+{
+alert("Enter The Country");
+return false;
+}
+else if(state===""||state===null)
+{
+alert("Enter The State");
+return false;
+}
+else if(isNaN(pc)||pc<1||pc>7)
+{
+alert("The pincode must be a number between 1 and 7");
+return false;
+}
+else if(sta<3)
+{
+alert("The State must contain atmost 2 letters");
+return false;
+}
+else
+alert("The User Information Submitted Successfully");
+}
+</script>
+</head>
+<body >
+<b>
+<h3>User Information Form</h3>
+<form action="" onsubmit="return validation()" method="post">
+    <fieldset style="width: 500px">
+<legend>User Registration form: </legend>
+First Name: <input type="text" id="fnm"><br><br>
+Last Name: <input type="text" id="lnm"><br><br>
+Address: <input type="text" id="ad"><br><br>
+City: <input type="text" id="cty"><br><br>
+State: <input type="text" id="sta"><br><br>
+Country: <input type="text" id="cnty"><br><br>
+Pin code: <input type="text" id="pc"><br><br>
+User Name: <input type="text" id="unm"><br><br>
+Password: <input type="text" id="pwd"><br><br>
+<button type="submit">Register User</button>
+<button type="submit">Reset</button>
+</fieldset>
+</form>
+</b>
+</body>
+</html>

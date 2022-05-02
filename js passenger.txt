@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Passenger Information Form</title>
+<script type="text/javascript">
+function valid() 
+{
+var na = document.getElementById("nm").value;
+var ag = document.getElementById("age").value;
+var em = document.getElementById("eid").value.indexOf("@");
+var gen = document.getElementById("gend").value;
+if(na===""||na===null)
+{
+alert("Enter The Name");
+return false;
+}
+else if(isNaN(ag)||ag<1||ag>100)
+{
+alert("The age must be a number between 1 and 100");
+return false;
+}
+else if(em===-1) 
+{  
+alert("E-mail ID is not valid");
+return false;
+}
+else if(gen===""||gen===null)
+{
+    alert("Select gender");
+    return false;
+}
+else
+alert("The Passenger Information Submitted Successfully");
+}
+</script>
+</head>
+<body bgcolor="#CCE5FF" style="font-size: x-large">
+<b>
+<h3>Student Information Form</h3>
+<form action="" onsubmit="return valid()" method="post">
+Name: <input type="text" id="nm"><br><br>
+Age: <input type="text" id="age"><br><br>
+Email id: <input type="text" id="eid"><br><br>
+Gender:<br><br>
+<input type="radio" name="Gender" value="male" id="gend">Male<br><br>
+<input type="radio" name="Gender" value="female" id="gend">Female<br><br>
+<input type="submit" value="Submit">
+</form>
+</b>
+</body>
+</html>

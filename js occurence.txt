@@ -1,0 +1,39 @@
+
+
+<html>
+
+<head>
+	<title>
+		count string occurrence in a string
+	</title>
+</head>
+
+<body style="text-align:center;">
+
+	<h1 style="color:green;">
+		GeeksForGeeks
+	</h1>
+	<h3>
+	count string occurrence in a string
+</h3>
+
+	<button onClick="gfg()">
+		count
+	</button>
+	<p id="rk">
+
+	</p>
+
+	<!-- Script to count string
+		occurrence in a string -->
+	<script>
+		function gfg() {
+			var r = "Geeks For Geeks ";
+			document.getElementById("rk").innerHTML =
+			(r.match(/Geeks/g)).length;
+
+		}
+	</script>
+</body>
+
+</html>
